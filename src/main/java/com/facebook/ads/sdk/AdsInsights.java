@@ -67,6 +67,8 @@ public class AdsInsights extends APINode {
   private String mAdsetId = null;
   @SerializedName("adset_name")
   private String mAdsetName = null;
+  @SerializedName("age")
+  private String mAge = null;
   @SerializedName("buying_type")
   private String mBuyingType = null;
   @SerializedName("call_to_action_clicks")
@@ -103,6 +105,8 @@ public class AdsInsights extends APINode {
   private String mCostPerUniqueClick = null;
   @SerializedName("cost_per_unique_inline_link_click")
   private String mCostPerUniqueInlineLinkClick = null;
+  @SerializedName("country")
+  private String mCountry = null;
   @SerializedName("cost_per_unique_outbound_click")
   private List<AdsActionStats> mCostPerUniqueOutboundClick = null;
   @SerializedName("cpc")
@@ -123,6 +127,16 @@ public class AdsInsights extends APINode {
   private String mEstimatedAdRecallers = null;
   @SerializedName("frequency")
   private String mFrequency = null;
+  @SerializedName("frequency_value")
+  private String mFrequencyValue = null;
+  @SerializedName("gender")
+  private String mGender = null;
+  @SerializedName("hourly_stats_aggregated_by_advertiser_time_zone")
+  private String mHourlyStatsAggregatedByAdvertiserTimeZone = null;
+  @SerializedName("hourly_stats_aggregated_by_audience_time_zone")
+  private String mHourlyStatsAggregatedByAudienceTimeZone = null;
+  @SerializedName("impression_device")
+  private String mImpressionDevice = null;
   @SerializedName("impressions")
   private String mImpressions = null;
   @SerializedName("inline_link_click_ctr")
@@ -426,6 +440,24 @@ public class AdsInsights extends APINode {
     return this;
   }
 
+  public String getFieldAge() {
+    return mAge;
+  }
+
+  public AdsInsights setFieldAge(String value) {
+    this.mAge = value;
+    return this;
+  }
+
+  public String getFieldAppStoreClicks() {
+    return mAppStoreClicks;
+  }
+
+  public AdsInsights setFieldAppStoreClicks(String value) {
+    this.mAppStoreClicks = value;
+    return this;
+  }
+
   public String getFieldBuyingType() {
     return mBuyingType;
   }
@@ -613,8 +645,17 @@ public class AdsInsights extends APINode {
     return this;
   }
 
+  public String getFieldCountry() {
+    return mCountry;
+  }
+
   public List<AdsActionStats> getFieldCostPerUniqueOutboundClick() {
     return mCostPerUniqueOutboundClick;
+  }
+
+  public AdsInsights setFieldCountry(String value) {
+    this.mCountry = value;
+    return this;
   }
 
   public AdsInsights setFieldCostPerUniqueOutboundClick(List<AdsActionStats> value) {
@@ -705,6 +746,51 @@ public class AdsInsights extends APINode {
 
   public AdsInsights setFieldFrequency(String value) {
     this.mFrequency = value;
+    return this;
+  }
+
+  public String getFieldFrequencyValue() {
+    return mFrequencyValue;
+  }
+
+  public AdsInsights setFieldFrequencyValue(String value) {
+    this.mFrequencyValue = value;
+    return this;
+  }
+
+  public String getFieldGender() {
+    return mGender;
+  }
+
+  public AdsInsights setFieldGender(String value) {
+    this.mGender = value;
+    return this;
+  }
+
+  public String getFieldHourlyStatsAggregatedByAdvertiserTimeZone() {
+    return mHourlyStatsAggregatedByAdvertiserTimeZone;
+  }
+
+  public AdsInsights setFieldHourlyStatsAggregatedByAdvertiserTimeZone(String value) {
+    this.mHourlyStatsAggregatedByAdvertiserTimeZone = value;
+    return this;
+  }
+
+  public String getFieldHourlyStatsAggregatedByAudienceTimeZone() {
+    return mHourlyStatsAggregatedByAudienceTimeZone;
+  }
+
+  public AdsInsights setFieldHourlyStatsAggregatedByAudienceTimeZone(String value) {
+    this.mHourlyStatsAggregatedByAudienceTimeZone = value;
+    return this;
+  }
+
+  public String getFieldImpressionDevice() {
+    return mImpressionDevice;
+  }
+
+  public AdsInsights setFieldImpressionDevice(String value) {
+    this.mImpressionDevice = value;
     return this;
   }
 
