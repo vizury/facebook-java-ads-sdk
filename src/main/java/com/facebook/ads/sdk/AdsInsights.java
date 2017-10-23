@@ -449,15 +449,6 @@ public class AdsInsights extends APINode {
     return this;
   }
 
-  public String getFieldAppStoreClicks() {
-    return mAppStoreClicks;
-  }
-
-  public AdsInsights setFieldAppStoreClicks(String value) {
-    this.mAppStoreClicks = value;
-    return this;
-  }
-
   public String getFieldBuyingType() {
     return mBuyingType;
   }
