@@ -5160,4 +5160,27 @@ public class ProductCatalog extends APINode {
       }
     };
   }
+
+public static enum EnumVertical {
+      @SerializedName("commerce")
+      VALUE_COMMERCE("commerce"),
+      @SerializedName("destinations")
+      VALUE_DESTINATIONS("destinations"),
+      @SerializedName("flights")
+      VALUE_FLIGHTS("flights"),
+      @SerializedName("hotels")
+      VALUE_HOTELS("hotels"),
+      NULL(null);
+
+      private String value;
+
+      private EnumVertical(String value) {
+        this.value = value;
+      }
+
+      @Override
+      public String toString() {
+        return value;
+      }
+  }
 }

@@ -4762,4 +4762,128 @@ public class Business extends APINode {
       }
     };
   }
+
+  public static class APIRequestCreateProductCatalog extends APIRequest<ProductCatalog> {
+
+    ProductCatalog lastResponse = null;
+    @Override
+    public ProductCatalog getLastResponse() {
+      return lastResponse;
+    }
+    public static final String[] PARAMS = {
+      "da_display_settings",
+      "flight_catalog_settings",
+      "name",
+      "vertical",
+    };
+
+    public static final String[] FIELDS = {
+    };
+
+    @Override
+    public ProductCatalog parseResponse(String response) throws APIException {
+      return ProductCatalog.parseResponse(response, getContext(), this).head();
+    }
+
+    @Override
+    public ProductCatalog execute() throws APIException {
+      return execute(new HashMap<String, Object>());
+    }
+
+    @Override
+    public ProductCatalog execute(Map<String, Object> extraParams) throws APIException {
+      lastResponse = parseResponse(executeInternal(extraParams));
+      return lastResponse;
+    }
+
+    public APIRequestCreateProductCatalog(String nodeId, APIContext context) {
+      super(context, nodeId, "/product_catalogs", "POST", Arrays.asList(PARAMS));
+    }
+
+    @Override
+    public APIRequestCreateProductCatalog setParam(String param, Object value) {
+      setParamInternal(param, value);
+      return this;
+    }
+
+    @Override
+    public APIRequestCreateProductCatalog setParams(Map<String, Object> params) {
+      setParamsInternal(params);
+      return this;
+    }
+
+
+    public APIRequestCreateProductCatalog setDaDisplaySettings (Object daDisplaySettings) {
+      this.setParam("da_display_settings", daDisplaySettings);
+      return this;
+    }
+    public APIRequestCreateProductCatalog setDaDisplaySettings (String daDisplaySettings) {
+      this.setParam("da_display_settings", daDisplaySettings);
+      return this;
+    }
+
+    public APIRequestCreateProductCatalog setFlightCatalogSettings (Map<String, String> flightCatalogSettings) {
+      this.setParam("flight_catalog_settings", flightCatalogSettings);
+      return this;
+    }
+    public APIRequestCreateProductCatalog setFlightCatalogSettings (String flightCatalogSettings) {
+      this.setParam("flight_catalog_settings", flightCatalogSettings);
+      return this;
+    }
+
+    public APIRequestCreateProductCatalog setName (String name) {
+      this.setParam("name", name);
+      return this;
+    }
+
+    public APIRequestCreateProductCatalog setVertical (ProductCatalog.EnumVertical vertical) {
+      this.setParam("vertical", vertical);
+      return this;
+    }
+    public APIRequestCreateProductCatalog setVertical (String vertical) {
+      this.setParam("vertical", vertical);
+      return this;
+    }
+
+    public APIRequestCreateProductCatalog requestAllFields () {
+      return this.requestAllFields(true);
+    }
+
+    public APIRequestCreateProductCatalog requestAllFields (boolean value) {
+      for (String field : FIELDS) {
+        this.requestField(field, value);
+      }
+      return this;
+    }
+
+    @Override
+    public APIRequestCreateProductCatalog requestFields (List<String> fields) {
+      return this.requestFields(fields, true);
+    }
+
+    @Override
+    public APIRequestCreateProductCatalog requestFields (List<String> fields, boolean value) {
+      for (String field : fields) {
+        this.requestField(field, value);
+      }
+      return this;
+    }
+
+    @Override
+    public APIRequestCreateProductCatalog requestField (String field) {
+      this.requestField(field, true);
+      return this;
+    }
+
+    @Override
+    public APIRequestCreateProductCatalog requestField (String field, boolean value) {
+      this.requestFieldInternal(field, value);
+      return this;
+    }
+
+  }
+
+  public APIRequestCreateProductCatalog createProductCatalog() {
+    return new APIRequestCreateProductCatalog(this.getPrefixedId().toString(), context);
+  }
 }
