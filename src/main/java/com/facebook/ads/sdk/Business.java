@@ -277,6 +277,10 @@ public class Business extends APINode {
     return new APIRequestDeleteApps(this.getPrefixedId().toString(), context);
   }
 
+  public APIRequestGetClientAdAccounts getAssignedAdAccounts() {
+    return new APIRequestGetClientAdAccounts(this.getPrefixedId().toString(), context);
+  }
+
   public APIRequestGetClientAdAccounts getClientAdAccounts() {
     return new APIRequestGetClientAdAccounts(this.getPrefixedId().toString(), context);
   }
